@@ -1,0 +1,15 @@
+.edit-todo {
+  position: relative;
+  padding: 10px;
+
+  &__status {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__close {
+    position: absolute;
+    top: 15px;
+    right: 10px;
+  }
+}
