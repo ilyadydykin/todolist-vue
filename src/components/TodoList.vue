@@ -29,26 +29,19 @@
 </template>
 
 <script>
-import { mapGetters } from "vuex";
-
 export default {
-  computed: {
-    ...mapGetters({
-      todos: "todos",
-    })
+  props: {
+    todos: Array
   },
   methods: {
     edit(todo) {
       this.$store.dispatch("editTodo", todo);
     },
 
-    complete(todo) {
-      this.$store.dispatch("completeTodo", todo);
-    },
-
     remove(todo) {
       this.$store.dispatch("removeTodo", todo);
     },
+
     changeCheckbox(todo) {
       this.$store.dispatch("completedTodo", todo);
     },
